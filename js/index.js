@@ -1,7 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const stage = document.querySelector('.stage');
+  const app = document.querySelector('#app');
+  const stage = new Stage(6, 3);
+  stage.mount(app);
+  
   const robert = new Pacman(3);
-  robert.mount(stage);
+  robert.mount(stage.element);
 
   document.addEventListener('keydown', (event) => {
     if(event.code === 'ArrowRight') {

@@ -1,5 +1,3 @@
-const TILE_SIZE = 85;
-
 class Pacman {
   constructor(pacX) {
     this.pacX = pacX;
