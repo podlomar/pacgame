@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+  font-size: 15px;
+}
+
+body {
+  margin: 0;
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.stage {
+  width: 1020px;
+  height: 510px;
+  background-image: url('img/tile.png');
+  position: relative;
+}
+
+.pac {
+  width: 85px; /* TILE_SIZE */
+  height: 85px; /* TILE_SIZE */
+  position: absolute;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 65px;
+  user-select: none;
+}
