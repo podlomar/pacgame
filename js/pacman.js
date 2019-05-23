@@ -1,8 +1,11 @@
 class Pacman {
-  constructor(stage, pacX, pacY) {
+  constructor(stage, pacX, pacY, name, gender, skinTone) {
     this.stage = stage;
     this.pacX = pacX;
     this.pacY = pacY;
+    this.name = name;
+    this.gender = gender;
+    this.skinTone = skinTone;
     this.pacMouth = 'closed';
     this.facing = 'right';
   }
@@ -44,12 +47,12 @@ class Pacman {
   render() {
     this.element = document.createElement('div');
     this.element.className = 'pac';
-    this.element.textContent = 'Robert: 0';
     return this.element;
   }
 
   update() {
-    this.element.style.backgroundImage = 'url(img/pacboy-active-light.png)';
+    this.element.textContent = `${this.name}: 0`;
+    this.element.style.backgroundImage = `url(img/pac${this.gender}-active-${this.skinTone}.png)`;
     this.element.style.left = this.pacX * TILE_SIZE + 'px';
     this.element.style.top = this.pacY * TILE_SIZE + 'px';
 
